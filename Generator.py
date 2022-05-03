@@ -1,8 +1,10 @@
+from multiprocessing.sharedctypes import Value
 from random import choice
 import string
 from time import sleep
 from tkinter import *
 import _thread
+from idlelib.tooltip import Hovertip
 
 def time(x):
   sleep(x)
@@ -69,11 +71,12 @@ chk1 = Checkbutton (root, text="Uppercase",
                           offvalue=0,
                           font="Calibri 12",
                           bg=bg,
-                          justify="left",
-                          anchor="w",
+                          justify="left", 
+                          anchor="w", 
                           width=15,
                           border=1,
                           padx=4)
+var1.set(1)
 
 # Option Number
 chk2 = Checkbutton (root, text="Number",
@@ -87,6 +90,7 @@ chk2 = Checkbutton (root, text="Number",
                           width=15,
                           border=1,
                           padx=4)
+var2.set(1)
 
 # Option Special Character
 chk3 = Checkbutton (root, text="Special Character",
@@ -119,10 +123,10 @@ scale = Scale(root, variable = scaleVar,
 scaleVar.set(16)
 
 # Password
-labelPassword = Label(root,  text="", 
-                          font="Arial 15", 
-                          pady=5, 
-                          bg=bg)
+labelPassword = Label(root, text="", 
+                            font="Arial 15", 
+                            pady=5, 
+                            bg=bg)
 
 # Msg Password Copy
 labelCopy = Label(root, text="", 
@@ -141,6 +145,9 @@ buttonGerar = Button(root,  text="GERAR SENHA",
                             border=0, 
                             fg=bg)
 
+myTip = Hovertip(chk1,'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+myTip = Hovertip(chk2,'0123456789')
+myTip = Hovertip(chk3,'!#$%&()*+,-./:;<=>?@[\]^_`{|}~')
 
 labelTitle.pack()
 chk1.pack()
