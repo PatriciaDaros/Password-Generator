@@ -5,10 +5,10 @@
 
 <!-- ============== HEADER ============== -->
 <div align="center" id="header">
-  <a href="https://github.com/RuanMiniguite"><img src="assets/GitHub.png" alt="Logo" width="110"></a>
+  <a href="https://github.com/RuanMiniguite"><img src="assets/pg.png" alt="Logo" width="110"></a>
   
-  <h3>Template Readme</h3>
-  <p>Base template for repositories on github</p>
+  <h3>Password Generator</h3>
+  <p>Strong Password Generator</p>
 </div>
 
 
@@ -41,17 +41,14 @@
 </div>
 
 
-
 <!-- ============== ABOUT ============== -->
 ## About the project
 
 <div align="center">
-  <img src="/assets/ImageDefault.jpg" alt="Print" width=90% ><br><br>
+  <img src="assets\Img1.png" alt="Print" width=50% ><br><br>
 
   <!-- [![Site][Site-shields]][Site-link] -->
 </div>
-
-<p>Project description!</p>
 
 
 <!-- ============== LANGUAGE ============== -->
