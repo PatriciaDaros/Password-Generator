@@ -4,6 +4,9 @@ from time import sleep
 from tkinter import *
 import _thread
 
+def time(x):
+  sleep(x)
+  labelCopy['text'] = " "
 
 def passwordGenerator():
   Password =''
@@ -27,9 +30,12 @@ def passwordGenerator():
   root.clipboard_clear()
   root.clipboard_append(Password)
   root.update()
-  labelCopy['text'] = "Message Copied!"  #Show User
+  labelCopy['text'] = "Password Copied!"   # Show User
+  _thread.start_new_thread(time, (3,))    # Delete Msg (3s)
 
 
+
+# ----------------------------- SCREEN -----------------------------
 # Setting default background color
 bg = "#FFF"
 bg_action = "#555"
