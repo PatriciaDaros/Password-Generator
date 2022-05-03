@@ -5,7 +5,7 @@
 
 <!-- ============== HEADER ============== -->
 <div align="center" id="header">
-  <a href="https://github.com/RuanMiniguite"><img src="assets/pg.png" alt="Logo" width="110"></a>
+  <a href="https://github.com/RuanMiniguite"><img src="assets\Pg.png" alt="Logo" width="110"></a>
   
   <h3>Password Generator</h3>
   <p>Strong Password Generator</p>
