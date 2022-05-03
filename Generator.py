@@ -22,7 +22,7 @@ var2     = IntVar()
 var3     = IntVar()
 scaleVar = IntVar()
 
-
+# Title
 labelTitle = Label (root, text="Password Generator!", 
                           font="Terminal 22", 
                           pady=10,
@@ -30,6 +30,7 @@ labelTitle = Label (root, text="Password Generator!",
                           bg=bg_action, 
                           fg=bg)
 
+# Option UpperCase 
 chk1 = Checkbutton (root, text="Uppercase",
                           variable=var1, 
                           onvalue=1,
@@ -42,6 +43,7 @@ chk1 = Checkbutton (root, text="Uppercase",
                           border=1,
                           padx=4)
 
+# Option Number
 chk2 = Checkbutton (root, text="Number",
                           variable=var2, 
                           onvalue=1,
@@ -54,8 +56,7 @@ chk2 = Checkbutton (root, text="Number",
                           border=1,
                           padx=4)
 
-
-
+# Option Special Character
 chk3 = Checkbutton (root, text="Special Character",
                           variable=var3, 
                           onvalue=1,
@@ -68,7 +69,7 @@ chk3 = Checkbutton (root, text="Special Character",
                           border=1,
                           padx=4)
 
-
+# Option Size Password
 scale = Scale(root, variable = scaleVar, 
                     orient='horizontal', 
                     from_= 4, 
@@ -85,11 +86,13 @@ scale = Scale(root, variable = scaleVar,
                     bg=bg)
 scaleVar.set(16)
 
+# Password
 labelPassword = Label(root,  text="", 
                           font="Arial 20", 
                           pady=5, 
                           bg=bg)
 
+# Msg Password Copy
 labelCopy = Label(root, text="", 
                         font="Arial 8", 
                         pady=4, 
