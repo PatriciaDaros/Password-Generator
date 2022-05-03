@@ -4,6 +4,32 @@ from time import sleep
 from tkinter import *
 import _thread
 
+
+def passwordGenerator():
+  Password =''
+  sizePassword = scaleVar.get()
+  character = string.ascii_lowercase
+
+  if var1.get() == 1:
+    character = character + string.ascii_uppercase
+  if var2.get() == 1:
+    character = character + string.digits
+  if var3.get() == 1:
+    character = character + string.punctuation
+
+  for i in range(sizePassword):
+    Password += choice(character)
+
+  # Set label new Password
+  labelPassword['text'] = Password
+
+  # Copying password to clipboard
+  root.clipboard_clear()
+  root.clipboard_append(Password)
+  root.update()
+  labelCopy['text'] = "Message Copied!"  #Show User
+
+
 # Setting default background color
 bg = "#FFF"
 bg_action = "#555"
@@ -88,7 +114,7 @@ scaleVar.set(16)
 
 # Password
 labelPassword = Label(root,  text="", 
-                          font="Arial 20", 
+                          font="Arial 15", 
                           pady=5, 
                           bg=bg)
 
@@ -99,15 +125,15 @@ labelCopy = Label(root, text="",
                         fg='red', 
                         bg=bg)
 
-# buttonGerar = Button(root,  text="GERAR SENHA",  
-#                             font="Terminal 20", 
-#                             command=passwordGenerator,
-#                             width=50, 
-#                             height=8, 
-#                             bg='#555', 
-#                             relief="raised", 
-#                             border=0, 
-#                             fg=bg)
+buttonGerar = Button(root,  text="GERAR SENHA",  
+                            font="Terminal 20", 
+                            command=passwordGenerator,
+                            width=50, 
+                            height=8, 
+                            bg=bg_action, 
+                            relief="raised", 
+                            border=0, 
+                            fg=bg)
 
 
 labelTitle.pack()
@@ -117,6 +143,6 @@ chk3.pack()
 scale.pack()
 labelPassword.pack()
 labelCopy.pack()
-# buttonGerar.pack()
+buttonGerar.pack()
 
 root.mainloop()
