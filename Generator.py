@@ -5,7 +5,7 @@ from time import sleep
 from tkinter import *
 import _thread
 from idlelib.tooltip import Hovertip
-
+#
 def time(x):
   sleep(x)
   labelCopy['text'] = " "
